@@ -1,0 +1,45 @@
+﻿/* Styling for the main heading */
+h1 {
+    color: #2e4ead;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the site introduction */
+.site-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+    /* Styling for the list of genres */
+    .site-intro ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+        .site-intro ul li {
+            margin-bottom: 5px;
+        }
+
+/* Styling for the CTA button */
+.cta {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2e4ead;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn:hover {
+        background-color: #1e368e;
+    }

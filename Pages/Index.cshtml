@@ -1,0 +1,38 @@
+﻿@page
+<!-- This is the Razor Page for the "Creation" page of "The Books" website. -->
+
+<!-- The page directive indicates that this file represents a Razor Page. -->
+
+
+<!-- Set the model for this Razor Page to be the IndexModel. -->
+@model IndexModel
+@{
+    // Set the page title dynamically using ViewData["Title"].
+    ViewData["Title"] = "The Books CREATION!";
+}
+
+<!-- Display the page title in an h1 heading. -->
+<h1>@ViewData["Title"]</h1>
+
+<!-- Create a row to display the books in a card layout. -->
+<div class="row">
+    <!-- Use a foreach loop to iterate through each book in the Model.Books collection. -->
+    @foreach (var book in Model.Books)
+    {
+        <!-- Each book will be displayed in a column with a maximum width of medium (col-md-4). -->
+        <div class="col-md-4">
+            <!-- Create a card element for each book using Bootstrap classes. -->
+            <div class="card mb-4 shadow-sm">
+                <!-- Display the book cover image at the top of the card. -->
+                <img src="@book.ImageUrl" class="card-img-top" alt="Book Cover">
+                <div class="card-body">
+                    <!-- Display the book title as the card title. -->
+                    <h5 class="card-title">@book.Title</h5>
+                    <!-- Display the book author and number of pages in the card body. -->
+                    <p class="card-text">Author: @book.Author</p>
+                    <p class="card-text">Pages: @book.Pages</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

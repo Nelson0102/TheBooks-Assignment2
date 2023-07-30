@@ -1,0 +1,31 @@
+﻿/* Styling for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Styling for the contact details container */
+.contact-details {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the headings */
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Styling for the contact information */
+p {
+    margin: 5px 0;
+}

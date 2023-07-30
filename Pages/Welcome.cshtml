@@ -1,0 +1,42 @@
+﻿@page
+<!-- This is the Razor Page for the "Welcome" page of "The Books" website. -->
+
+<!-- The page directive indicates that this file represents a Razor Page. -->
+
+
+<!-- Set the model for this Razor Page to be the WelcomeModel. -->
+@model TheBooks.Pages.WelcomeModel
+@{
+    // Set the page title dynamically using ViewData["Title"].
+    ViewData["Title"] = "Welcome to The Books Site";
+}
+
+<!-- Display the page title in an h1 heading. -->
+<h1>@ViewData["Title"]</h1>
+
+<!-- Link to the welcome.css file for custom styles. -->
+<link rel="stylesheet" href="/css/welcome.css" />
+
+<!-- Introduction section -->
+<div class="site-intro">
+    <p>Welcome to The Books Site! We are delighted to have you here.</p>
+    <p>Our site is dedicated to book lovers like you, offering an extensive collection of books from various genres, including:</p>
+
+    <!-- Unordered list of book genres -->
+    <ul>
+        <li>Romance</li>
+        <li>Mystery</li>
+        <li>Fantasy</li>
+        <li>Science Fiction</li>
+        <li>Thriller</li>
+        <!-- Add more genres as needed -->
+    </ul>
+
+    <p>Whether you're looking for the latest bestsellers or timeless classics, we have something for everyone.</p>
+</div>
+
+<!-- Call to Action (CTA) section -->
+<div class="cta">
+    <!-- A link button to the "/Books" page where users can browse books. -->
+    <a href="/Books" class="btn btn-primary">Browse Books</a>
+</div>

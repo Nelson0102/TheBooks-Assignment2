@@ -1,0 +1,22 @@
+/* Styles for the featured books section */
+.featured-books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .book-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .book-card h3 {
+        margin-top: 8px;
+    }

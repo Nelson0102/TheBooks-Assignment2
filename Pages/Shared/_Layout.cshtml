@@ -1,0 +1,76 @@
+﻿<!-- This is the main HTML file for "The Books" website. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Define the viewport to ensure proper rendering on various devices. -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Set the page title dynamically using ViewData["Title"]. -->
+    <title>@ViewData["Title"] - The Books</title>
+
+    <!-- Link to the site.css file for custom styles. -->
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Include Bootstrap CSS to leverage its styling and layout capabilities. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        <!-- The header section of the page containing the navigation bar. -->
+        <header>
+            <!-- Create a responsive navigation bar using Bootstrap's navbar component. -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- Brand name for the website, "The Books." -->
+                <a class="navbar-brand" href="#">The Books</a>
+
+                <!-- Button for toggling the collapsible navigation links on small screens. -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- The collapsible navigation links container. -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Unordered list of navigation links. -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- Home link pointing to the "Welcome" page. -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Welcome">Home</a>
+                        </li>
+
+                        <!-- Creation link pointing to the "Index" page. -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Index">Creation</a>
+                        </li>
+
+                        <!-- Privacy link pointing to the "Privacy" page. -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Privacy">Privacy</a>
+                        </li>
+
+                        <!-- Contact link pointing to the "Contact" page. -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- The main content section of the page. -->
+        <main role="main">
+            <!-- The content of the individual Razor pages will be rendered here. -->
+            @RenderBody()
+        </main>
+
+        <!-- The footer section of the page. -->
+        <footer>
+            <!-- Display the current year using DateTime.Now.Year and the site name. -->
+            <p>&copy; @DateTime.Now.Year - The Books</p>
+        </footer>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery for responsive features and interactivity. -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
